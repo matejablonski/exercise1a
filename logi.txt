@@ -1,0 +1,66 @@
+~\Desktop\SEMESTR VI\Wprowadzenie do systemów rozproszonych\Exercises\exercise1a [master ?]> cd .\conversions
+~\Desktop\SEMESTR VI\Wprowadzenie do systemów rozproszonych\Exercises\exercise1a\conversions [master ?]> mkdir bin
+
+
+    Directory: C:\Users\Mateusz\Desktop\SEMESTR VI\Wprowadzenie do systemów rozproszonych\Exercises\exercise1a\conversions
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----       21.03.2017     20:32                bin
+
+
+~\Desktop\SEMESTR VI\Wprowadzenie do systemów rozproszonych\Exercises\exercise1a\conversions [master ?]> javac wdsr\exercise1\conversions\*.* -d bin
+~\Desktop\SEMESTR VI\Wprowadzenie do systemów rozproszonych\Exercises\exercise1a\conversions [master ? +1 ~0 -0 !]> jar cvf conversions-1.0.jar -C bin .
+added manifest
+adding: wdsr/(in = 0) (out= 0)(stored 0%)
+adding: wdsr/exercise1/(in = 0) (out= 0)(stored 0%)
+adding: wdsr/exercise1/conversions/(in = 0) (out= 0)(stored 0%)
+adding: wdsr/exercise1/conversions/ArrayConverter.class(in = 1231) (out= 592)(deflated 51%)
+~\Desktop\SEMESTR VI\Wprowadzenie do systemów rozproszonych\Exercises\exercise1a\conversions [master ? +2 ~0 -0 !]> cd ..
+~\Desktop\SEMESTR VI\Wprowadzenie do systemów rozproszonych\Exercises\exercise1a [master ? +2 ~0 -0 !]> cd .\calculator
+~\Desktop\SEMESTR VI\Wprowadzenie do systemów rozproszonych\Exercises\exercise1a\calculator [master ? +2 ~0 -0 !]> mkdir bin
+
+
+    Directory: C:\Users\Mateusz\Desktop\SEMESTR VI\Wprowadzenie do systemów rozproszonych\Exercises\exercise1a\calculator
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----       21.03.2017     20:55                bin
+
+~\Desktop\SEMESTR VI\Wprowadzenie do systemów rozproszonych\Exercises\exercise1a\calculator [master ? +2 ~0 -0 !]> javac wdsr\exercise1\*.java -d bin
+wdsr\exercise1\Main.java:4: error: package wdsr.exercise1.conversions does not exist
+import wdsr.exercise1.conversions.ArrayConverter;
+                                 ^
+.\wdsr\exercise1\logic\Calculator.java:3: error: package org.apache.commons.lang3.math does not exist
+import org.apache.commons.lang3.math.NumberUtils;
+                                    ^
+wdsr\exercise1\Main.java:16: error: cannot find symbol
+        int[] nums = new ArrayConverter().convertToInts(args);
+                         ^
+  symbol:   class ArrayConverter
+  location: class Main
+.\wdsr\exercise1\logic\Calculator.java:10: error: cannot find symbol
+        return NumberUtils.min(values);
+               ^
+  symbol:   variable NumberUtils
+  location: class Calculator
+.\wdsr\exercise1\logic\Calculator.java:14: error: cannot find symbol
+        return NumberUtils.max(values);
+               ^
+  symbol:   variable NumberUtils
+  location: class Calculator
+5 errors
+~\Desktop\SEMESTR VI\Wprowadzenie do systemów rozproszonych\Exercises\exercise1a\calculator\lib [master ? +3 ~0 -0 !]> ls
+
+
+    Directory: C:\Users\Mateusz\Desktop\SEMESTR VI\Wprowadzenie do systemów rozproszonych\Exercises\exercise1a\calculator\lib
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----       21.03.2017     21:27         434678 commons-lang3-3.4.jar
+
+
+~\Desktop\SEMESTR VI\Wprowadzenie do systemów rozproszonych\Exercises\exercise1a\calculator\lib [master ? +3 ~0 -0 !]>
